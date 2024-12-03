@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI4A Lab: Amark - Answer Marking">
+    <title>AI4A Lab: Amark</title>
+    <link rel="icon" type="image/x-icon" href="css/logo.png">
+    <link rel="stylesheet" href="css/styles_amark.css">
+</head>
+<body>
+    <div id="header">
+        <h1>AI4A Lab: Amark</h1>
+    </div>
+
+    <div class="main-container">
+        <div id="image-Container" class="container">
+            <!-- Image will be dynamically loaded here -->
+        </div>
+        <div class="right-container">
+            <div id="question-detail-Container" class="container">
+                Loading question details...
+            </div>
+            <div id="question-Container" class="container">
+                Loading question...
+            </div>
+            <div id="user-answer-Container" class="container">
+                Loading user answer...
+            </div>
+            <div id="correct-answer-Container" class="container">
+                Loading correct answer...
+            </div>
+        </div>
+    </div>
+    
+    <div class="score-container">
+        <p>Select answer score and give reasoning for the score:</p>
+
+        <form id="scoreForm">
+        <!-- Radio buttons for scores -->
+            <div>
+                <input type="radio" id="score0" name="score" value="0" required>
+                <label for="score0">0</label>
+            </div>
+            
+            <div>
+                <input type="radio" id="score1" name="score" value="1">
+                <label for="score1">1</label>
+            </div>
+            
+            <div>
+                <input type="radio" id="score2" name="score" value="2">
+                <label for="score2">2</label>
+            </div>
+            
+            <div>
+                <input type="radio" id="score3" name="score" value="3">
+                <label for="score3">3</label>
+            </div>
+                
+            <div>
+                <input type="radio" id="score4" name="score" value="4">
+                <label for="score4">4</label>
+            </div>
+                
+            <div>
+                <input type="radio" id="score5" name="score" value="5">
+                <label for="score5">5</label>
+            </div>
+                
+            <div>
+                <input type="radio" id="score6" name="score" value="6">
+                <label for="score6">6</label>
+            </div>
+
+            <div>
+                <input type="radio" id="score7" name="score" value="7">
+                <label for="score7">7</label>
+            </div>
+
+            <div>
+                <input type="radio" id="score8" name="score" value="8">
+                <label for="score8">8</label>
+            </div>
+
+            <div>
+                <input type="radio" id="score9" name="score" value="9">
+                <label for="score9">9</label>
+            </div>
+
+            <div>
+                <input type="radio" id="score10" name="score" value="10">
+                <label for="score10">10</label>
+            </div>
+
+            <div class="text-answer-container">
+                <textarea id="answerInput" placeholder="Write your reasoning/justification for the score here..." required></textarea>
+            </div>
+
+            <button id="submitButton">Submit</button>
+        </form>
+    </div>
+
+    <script src="js/script_amark.js"></script>
+</body>
+</html>
+
+<!-- Author: Farhan Sheth (Phantom-FS) -->
+<!-- Date: 2024-03-01 -->
+<!-- LinkedIn: https://www.linkedin.com/in/farhan-sheth -->
