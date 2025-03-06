@@ -51,7 +51,7 @@ console.log(u_name, u_reg, u_email, u_phone);
 console.log(question_type_number);
 
 // Disable the submit button and start a timer with a countdown for x seconds
-function disableSubmitButtonForTime(totalSeconds = 60) {
+function disableSubmitButtonForTime(totalSeconds = 15) {
     submitButton.disabled = true;
     submitButton.style.backgroundColor = "black";
     let timeLeft = totalSeconds;
@@ -178,8 +178,8 @@ function fetchData() {
         userAnswerContainer.innerHTML = `<p style="font-size: 14px;">User Answer:</p>\n${global_user_answer}`;
         correctAnswerContainer.innerHTML = `<p style="font-size: 14px;">Possible Answer:</p>\n${global_correct_answer}`;
 
-        // Disable the submit button for 30 seconds
-        disableSubmitButtonForTime(30);
+        // Disable the submit button for 10 seconds
+        disableSubmitButtonForTime(10);
 
         console.log('Data:', data);
     })
@@ -196,7 +196,7 @@ function handleSubmit() {
     // radio button selected from the scoreForm
     if (document.querySelector('input[name="score"]:checked') === null) {
         alert("Please score/mark the given answer!");
-        disableSubmitButtonForTime(15);
+        disableSubmitButtonForTime(5);
         return;
     }
 
@@ -205,20 +205,20 @@ function handleSubmit() {
     // undefined or empty string
     if (score === undefined || score === "" || !score) {
         alert("Please score/mark the given answer!");
-        disableSubmitButtonForTime(15);
+        disableSubmitButtonForTime(5);
         return; 
     }
 
     if (score === "0" && scoreFlag === false) {
         alert("Are you sure you want to give \"0\" score to the ANSWER?");
-        disableSubmitButtonForTime(10);
+        disableSubmitButtonForTime(5);
         scoreFlag = true;
         return;
     }
 
     if (!val_question_range.includes(score) && score !== "0") {
         alert("Invalid score. Please try again or reload the page!");
-        disableSubmitButtonForTime(10);
+        disableSubmitButtonForTime(5);
         return;
     }
 
@@ -229,14 +229,14 @@ function handleSubmit() {
     // if the scoreReason is empty
     if (scoreReason === undefined || scoreReason === "" || !scoreReason) {
         alert("Please provide a reason/justification for the score!");
-        disableSubmitButtonForTime(15);
+        disableSubmitButtonForTime(5);
         return;
     }
 
     // length of the reasoning/justification
     if (scoreReason.split(' ').length <= 3) {
         alert("Please provide a detailed reason/justification for the score!");
-        disableSubmitButtonForTime(15);
+        disableSubmitButtonForTime(5);
         return;
     }
 
